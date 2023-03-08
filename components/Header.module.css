@@ -1,0 +1,20 @@
+/* .header {
+  background-color: #14213D;
+  color: #E5E5E5;
+  padding: 10px;
+  text-align: left;
+} */
+
+
+.header {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  width: auto;
+  background-color: #14213D;
+  color: #FCA311;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 20px;
+}
