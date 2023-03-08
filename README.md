@@ -12,8 +12,9 @@ My approach was that I want to create a lot of API endpoints that can be used in
 
 By using the data given to us, we can compute how different pricing models fit the user based on their real life consumption. I think this is a good way to give the average people more insight into their power bill and motivate them to change the provider if they see that another provider can offer them a lower power bill based on their real consumption and not just what the media and other providers tell them.
 
-
 There are many different ways if determining if a provider is good or bad. Not just the pricing and monthley fees, but also how they get their energy. Since I could not find a good API to get the the distribution of where the power originates from I desided to go for the classification of which provider is cheaper for the user. If I had found this information I think this would be a good thing to present to the user. Many people like to know that the power they are getting is 100% clean. 
+
+Other things that can help users when looking at the data we present is to show how the weather was at the given time. I tried to also create some usable endpoints to get some weather data from data I found. 
 
 So in this task, we want you to create an application or service that can help consumers choose the power provider that is cheapest for them.
 There are many considerations and approaches to solving such a problem, you are therefore free to solve this task in any way you want. You are free to focus on frontend, backend, design or everything combined. Creativity is encouraged!
