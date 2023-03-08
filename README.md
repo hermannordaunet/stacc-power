@@ -1,12 +1,18 @@
-# Welcome to the Future of Fintech Spring 2023 challenge!
+# My submittion for the Future of Fintech Spring 2023 challenge!
 
 ## **Theme:** ⚡ Electricity ⚡
 
-For the past year and a half, electricity prices have been soaring and it affects us all. To help save on prices people have quickly become much more conscious about their usage.
+As you guys perfectly described:
+
+*"For the past year and a half, electricity prices have been soaring and it affects us all. To help save on prices people have quickly become much more conscious about their usage."*
 
 Reducing your power bill is a two faced problem, firstly you have to reduce actual usage, but you can also save by choosing the *best* power provider.
  - There are many providers to consider, and each provider may have their own unique pricing model.
  ([Also doesn't help that most people have no idea about what they are paying. (Norwegian)](https://www.forbrukerradet.no/siste-nytt/ingen-vet-hva-strommen-koster/))
+ 
+The problem of reducing your power bill is as you said a two faced problem. I tried to put focus on choosing the **best** power provider for the indiviual users. Since no one has the same everyday life, the choice of pricing model that gives each individual the lowest power bill is not easy. 
+
+My approach was that I want to create a lot of api endpoints that can be used to in various ways. Both to present the data we have from the users power consumption, providers and their pricing model and to create some endpoints that numerically analyses the users data, calculates some prices of the usage based on the different providers and some endpoints to compare different providers using the users data. 
 
 
 All in all, it can be a bit confusing and a bit overwhelming.
