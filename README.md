@@ -1,21 +1,19 @@
-# My submittion for the Future of Fintech Spring 2023 challenge!
+# My submission for the Future of Fintech Spring 2023 challenge!
 
 ## **Theme:** ⚡ Electricity ⚡
 
 As you guys perfectly described:
 
-*"For the past year and a half, electricity prices have been soaring and it affects us all. To help save on prices people have quickly become much more conscious about their usage."*
-
-Reducing your power bill is a two faced problem, firstly you have to reduce actual usage, but you can also save by choosing the *best* power provider.
- - There are many providers to consider, and each provider may have their own unique pricing model.
- ([Also doesn't help that most people have no idea about what they are paying. (Norwegian)](https://www.forbrukerradet.no/siste-nytt/ingen-vet-hva-strommen-koster/))
+*"For the past year and a half, electricity prices have been soaring, and it affects us all. To help save on prices, people have quickly become much more conscious about their usage."*
  
-The problem of reducing your power bill is as you said a two faced problem. I tried to put focus on choosing the **best** power provider for the indiviual users. Since no one has the same everyday life, the choice of pricing model that gives each individual the lowest power bill is not easy. 
+The problem of reducing your power bill is, as you said, a two-faced problem. I tried to put focus on choosing the **best** power provider for individual users. Since no one has the same everyday life, the choice of a pricing model that gives each individual the lowest power bill is not easy. 
 
-My approach was that I want to create a lot of api endpoints that can be used to in various ways. Both to present the data we have from the users power consumption, providers and their pricing model and to create some endpoints that numerically analyses the users data, calculates some prices of the usage based on the different providers and some endpoints to compare different providers using the users data. 
+My approach was that I want to create a lot of API endpoints that can be used in various ways. Both to present the data we have from the users' power consumption, providers, and their pricing model and to create some endpoints that numerically analyze the users' data, calculate some prices of the usage based on the different providers, and some endpoints to compare different providers using the users' data. 
+
+By using the data given to us, we can compute how different pricing models fit the user based on their real life consumption. I think this is a good way to give the average people more insight into their power bill and motivate them to change the provider if they see that another provider can offer them a lower power bill based on their real consumption and not just what the media and other providers tell them.
 
 
-All in all, it can be a bit confusing and a bit overwhelming.
+There are many different ways if determining if a provider is good or bad. Not just the pricing and monthley fees, but also how they get their energy. Since I could not find a good API to get the the distribution of where the power originates from I desided to go for the classification of which provider is cheaper for the user. If I had found this information I think this would be a good thing to present to the user. Many people like to know that the power they are getting is 100% clean. 
 
 So in this task, we want you to create an application or service that can help consumers choose the power provider that is cheapest for them.
 There are many considerations and approaches to solving such a problem, you are therefore free to solve this task in any way you want. You are free to focus on frontend, backend, design or everything combined. Creativity is encouraged!
