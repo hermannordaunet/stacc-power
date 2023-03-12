@@ -42,13 +42,13 @@ In the data folder I kept the two json files that you already provided, but I ad
 
 This is were I used most of my knowledge to create good endpoint so that the data we got provided could be used to create more explainable data to the user. 
 
-# Data
+### Data
 First I wanted to create some base points to get all the data I have collected, and I also kept the two that were already implemented:
 
 /api/weather
 /api/spot
 
-# Consumption
+### Consumption
 
 Then I wanted to create endpoint were the frontend developer can get the consumption data sliced into more usable sizes:
 
