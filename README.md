@@ -14,7 +14,9 @@ By using the data given to us, we can compute how different pricing models fit t
 
 There are many different ways if determining if a provider is good or bad. Not just the pricing and monthley fees, but also how they get their energy. Since I could not find a good API to get the the distribution of where the power originates from I desided to go for the classification of which provider is cheaper for the user. If I had found this information I think this would be a good thing to present to the user. Many people like to know that the power they are getting is 100% clean. 
 
-Other things that can help users when looking at the data we present is to show how the weather was at the given time. I tried to also create some usable endpoints to get some weather data from data I found. 
+Other things that can help users when looking at the data we present is to show how the weather was at the given time. I tried to also create a usable endpoint to get some weather data from data I found. 
+
+In my approach I tried to create a backend by making a lot more endpoints in the API folder that were already in the project. I just git cloned the repo and ended up using this as a base. I have no experience in frontend, so I tried to make use of my knowledge in the backend. I also like to do some design to get an idea of how my backend could be used. So that is why I also tried to make a Figma design on how this data that my backend extracts can be presented to the user. 
 
 So in this task, we want you to create an application or service that can help consumers choose the power provider that is cheapest for them.
 There are many considerations and approaches to solving such a problem, you are therefore free to solve this task in any way you want. You are free to focus on frontend, backend, design or everything combined. Creativity is encouraged!
@@ -29,6 +31,11 @@ Otherwise are you free to start from scratch and take the assignment in any dire
 
 ## Data
 
+In the data folder I kept the two json files that you already provided, but I added some files and changed one of the files:
+- spot.json # all the spotprices in norway in the same time range we had consumption data from. 
+- weather.json # weather data from the same time range as we had for the consumption data. 
+
+- providers.json # I changed the names and the prices with some known providers and some prices I found online. 
 We have created two different datasets that you can either read/copy directly from the folder. One is for the power consumption the last 500 hours for one household, the second is the prices and price models of some made up power providers. They are located in the `data` folder in this repository
 
 
