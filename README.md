@@ -32,16 +32,44 @@ Otherwise are you free to start from scratch and take the assignment in any dire
 ## Data
 
 In the data folder I kept the two json files that you already provided, but I added some files and changed one of the files:
-- spot.json # all the spotprices in norway in the same time range we had consumption data from. 
-- weather.json # weather data from the same time range as we had for the consumption data. 
+- spot.json # all the spotprices in norway in the same time range we had consumption data from. Downloaded from [Strømpris.no](https://www.strompris.no/spotpriser)
+- weather.json # weather data from the same time range as we had for the consumption data. Downloaded from [Open-Meteo](https://open-meteo.com/en/docs)
 
-- providers.json # I changed the names and the prices with some known providers and some prices I found online. 
-We have created two different datasets that you can either read/copy directly from the folder. One is for the power consumption the last 500 hours for one household, the second is the prices and price models of some made up power providers. They are located in the `data` folder in this repository
+- providers.json # I changed the names and the prices with some known providers and some prices I found online.
 
 
-The data is also available through an API. So if you for example go to `https://future-of-fintech-v2023.vercel.app/api/providers` you will get the same data.
+## Endpoints:
 
-Endpoints:
+This is were I used most of my knowledge to create good endpoint so that the data we got provided could be used to create more explainable data to the user. 
+
+# Data
+First I wanted to create some base points to get all the data I have collected, and I also kept the two that were already implemented:
+
+/api/weather
+/api/spot
+
+# Consumption
+
+Then I wanted to create endpoint were the frontend developer can get the consumption data sliced into more usable sizes:
+
+/api/consumption/hour
+/api/consumption/day
+/api/consumption/week
+/api/consumption/month
+/api/consumption/year
+/api/consumption/range
+api/consumption/total
+
+All these endpoint (except range) should end with /YYYY-MM-DDTHH. For example
+
+/api/consumption/hour/2023-01-02T15
+
+All these endpoints returns the filteredData, totalConsumption and the query used to get the data. 
+For the range endpoint the query needs to be:
+
+/api/consumption/range/YYYY-MM-DDTHH/YYYY-MM-DDTHH
+
+
 
 `https://future-of-fintech-v2023.vercel.app/api/providers`, `https://future-of-fintech-v2023.vercel.app/api/consumption`
 
