@@ -1,4 +1,4 @@
-import consumption from "../../../../data/consumption.json";
+import spot from "../../../../data/spot.json";
 import {
   setCorrectDateVariables,
   checkIfRangeInsideRange,
@@ -15,28 +15,25 @@ export default function handler(req, res) {
     res.status(400).json({ error: "endDate needs to be on the format YYYY-MM-DDTHH" });
   };
 
+  const data = spot["Spotpris-per-time"]
 
   if (range[0] && range[1]) {
     var [startDate, endDate] = setCorrectDateVariables(range);
 
-    checkIfRangeInsideRange(res, consumption, startDate, endDate);
 
-    const filteredData = consumption.filter((data) => {
-      const fromDate = data.from.substring(0, 13);
+    checkIfRangeInsideRange(res, data, startDate, endDate);
+
+    const filteredData = data.filter((d) => {
+      const fromDate = d.from.substring(0, 13);
       return fromDate >= startDate && fromDate <= endDate;
     });
 
-    // Calculate the total consumption for that range.
-    const totalRangeConsumption = parseFloat(
-      filteredData.reduce((acc, cur) => acc + cur.consumption, 0).toFixed(3)
-    );
-
-    var response = { filteredData, totalRangeConsumption, startDate, endDate };
+    var response = { filteredData, startDate, endDate };
 
     res.status(200).json(response);
   } else {
     res
       .status(400)
-      .json({ error: "query needs to be /YYYY-MM-DDTHH/YYYY-MM-DDTHH " });
+      .json({ error: "query needs to be /YYYY-MM-DD/YYYY-MM-DD " });
   }
 }

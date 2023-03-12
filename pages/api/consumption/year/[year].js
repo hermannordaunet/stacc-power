@@ -6,6 +6,7 @@ export default function handler(req, res) {
   // Cut the string to only get the date
   const dateSubString = year.substring(0, 4);
 
+
   // Filter the data to only have the data from the given date
   const filteredData = consumption.filter((d) => d.from.startsWith(dateSubString));
 

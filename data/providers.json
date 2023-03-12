@@ -2,34 +2,27 @@
   {
     "name": "Volte",
     "pricingModel": "fixed",
-    "monthlyFee": 39,
-    "fixedPrice": 154,
+    "monthlyFee": 3900,
+    "fixedPrice": 215.6,
     "fixedPricePeriod": 12
   },
   {
     "name": "Agva",
     "pricingModel": "fixed",
-    "monthlyFee": 49,
+    "monthlyFee": 4900,
     "fixedPrice": 294.9,
     "fixedPricePeriod": 3
   },
   {
-    "name": "Øst Energi",
-    "pricingModel": "variable",
-    "monthlyFee": 0,
-    "variablePrice": 0.5,
-    "variablePricePeriod": 12
-  },
-  {
     "name": "Motkraft",
     "pricingModel": "spot-hourly",
-    "monthlyFee": 29,
-    "prKwh": 2
+    "monthlyFee": 2900,
+    "prKwh": 2.0
   },
   {
     "name": "Fjordkraft",
     "pricingModel": "spot-hourly",
-    "monthlyFee": 49,
-    "sprKwh": 4.9
+    "monthlyFee": 4900,
+    "prKwh": 4.9
   }
 ]
