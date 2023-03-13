@@ -2,7 +2,7 @@ import consumption from "../../../../data/consumption.json";
 import { setCorrectDateVariables, checkIfRangeInsideRange } from "../../utils";
 
 export default function handler(req, res) {
-    var { range } = req.query;
+    const { range } = req.query;
 
     if (range.length < 2) {
         res.status(400).json({
@@ -41,6 +41,7 @@ export default function handler(req, res) {
         startDate,
         endDate,
         filteredData,
+        range,
     };
 
     res.status(200).json(response);
