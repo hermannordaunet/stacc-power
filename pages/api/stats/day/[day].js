@@ -2,9 +2,9 @@ import consumption from "../../../../data/consumption.json";
 import { calculatConsumptionByWeekday, countDaysByWeekday } from "../../utils"
 
 export default function handler(req, res) {
-  const { day } = req.query.substring(0, 10);
+  const { day } = req.query;
 
-  const date = new Date(day); // Convert the ISO 8601 string to a Date object
+  const date = new Date(day.substring(0, 10)); // Convert the ISO 8601 string to a Date object
   const weekdayName = date.toLocaleDateString("en-US", { weekday: "long" }); // Get the weekday name
 
   const weekdayTotals = calculatConsumptionByWeekday(consumption)
