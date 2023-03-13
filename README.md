@@ -29,7 +29,6 @@ You are free to base you solution from the web application packaged in this repo
 Otherwise are you free to start from scratch and take the assignment in any direction that you want. The only requirement is that it remains related to fintech. There are likely many other starting points to take inspiration from, one example being [Strømpris.no](https://www.strompris.no/)
 
 # Solution: 
--- 
 
 ## Data
 
@@ -177,11 +176,11 @@ The API returns these types of data:
 
 In this json we have information on how much the money the customer have used in terms of just the spotprice, and how much they have used if they had the different providers. 
 
---
+
 
 ## Get in touch!
 
---
+
 
 ## How to deliver
 
