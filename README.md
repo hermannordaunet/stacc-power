@@ -75,7 +75,7 @@ The `/api/consumption/total` is needs no query and only returns the sum of all t
 ### Stats
 In these endpoints I just wanted to get the idea of using the data we already have to either predict the power consumption for the given user, or use the given data to give the user som feedback on how and when the most power is consumed. I did not get to look to much into this, but I really wanted to be able to run some machine learning on this. Looking into machine learning and javascript I abonded the idea for now. But these to endpoint can give some cool data that might be interesting to some users. 
 
-`/api/stats/day`
+`/api/stats/day`  
 `/api/stats/hour`
 
 Both of these use the same time format as previous endspoints. 
@@ -84,20 +84,20 @@ Both of these use the same time format as previous endspoints.
 
 ### Spot
 
-`/api/consumption/hour`
-`/api/consumption/day`
-`/api/consumption/week`
-`/api/consumption/month`
-`/api/consumption/year`
-`/api/consumption/range`
+`/api/consumption/hour`  
+`/api/consumption/day`  
+`/api/consumption/week`  
+`/api/consumption/month`  
+`/api/consumption/year`  
+`/api/consumption/range`  
 
 All of these use the same time format as previous endspoints. 
 It returns the spot price for NO1-NO5. This can be useful because a lot of costumers does not even know what the spotprice is at a given time. 
 
 ### Weather
 
-`/api/weather/`
-
+`/api/weather/`  
+  
 This endpoint can return the weather for a given time. In the data there are the temperature and the wind speed. There could be more data, but I just tried to get some data to begin with. 
 
 The endpoint takes **/YYYY-MM-DDTHH** as the query. 
@@ -106,13 +106,13 @@ The endpoint takes **/YYYY-MM-DDTHH** as the query.
 
 Now for the one API that will be the most useful to give the costumer knowledge of the price they pay, and where they can save money. 
 
-`/api/comparison/hour`
-`/api/comparison/day`
-`/api/comparison/week`
-`/api/comparison/month`
-`/api/comparison/year`
-`/api/comparison/range`
-`/api/comparison/total`
+`/api/comparison/hour`  
+`/api/comparison/day`  
+`/api/comparison/week`  
+`/api/comparison/month`  
+`/api/comparison/year`  
+`/api/comparison/range`  
+`/api/comparison/total`  
 
 
 These endpoint work the same way as the consumption. 
