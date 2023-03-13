@@ -1,6 +1,6 @@
 # My submission for the Future of Fintech Spring 2023 challenge!
 
-## **Theme:** ⚡ Electricity ⚡
+## ⚡ Electricity ⚡
 
 ### As you guys perfectly described:
 
@@ -29,7 +29,7 @@ You are free to base you solution from the web application packaged in this repo
 Otherwise are you free to start from scratch and take the assignment in any direction that you want. The only requirement is that it remains related to fintech. There are likely many other starting points to take inspiration from, one example being [Strømpris.no](https://www.strompris.no/)
 
 # Design
-I tried to create a website using Figma that can show how the API endpoints can be used to give the customer more and easier information on how the power bill can be lowered based on their consumption data. A local file copy can be found [here](/design/Stacc-power-stuff.fig)
+I tried to create a website using Figma that can show how the API endpoints can be used to give the customer more and easier information on how the power bill can be lowered based on their consumption data. A local file copy can be found [here](/design/), named **Stacc-power-stuff.fig**.
 
 # API
 
@@ -42,7 +42,7 @@ In the data folder I kept the two json files that you already provided, but I ad
 - **providers.json** # I changed the names and the prices with some known providers and some prices I found online.
 
 
-## Endpoints:
+## Endpoints
 
 This is were I used most of my knowledge to create good endpoint so that the data we got provided could be used to create more explainable data to the user. 
 
@@ -177,12 +177,7 @@ The API returns these types of data:
 }
 ```
 
-In this json we have information on how much the money the customer have used in terms of just the spotprice, and how much they have used if they had the different providers. 
-
-
-
-## Get in touch!
-
+In this json we have information on how much the money the customer have used in terms of just the spotprice, and how much they have used if they had the different providers. A lot of people does not know how much they pay per kWh to the provider, so to present this number with and without the providers fee should make people more aware of how much they pay the provider for the power they use. 
 
 
 ## How to deliver
