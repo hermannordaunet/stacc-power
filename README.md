@@ -32,7 +32,7 @@ Since I used the same **how to run** and codebase as your provided this is the s
 In the data folder I kept the two json files that you already provided, but I added some files and changed one of the files:
 - **spot.json** # all the spotprices in norway in the same time range we had consumption data from. Downloaded from [Strømpris.no](https://www.strompris.no/spotpriser)
 - **weather.json** # weather data from the same time range as we had for the consumption data. Downloaded from [Open-Meteo](https://open-meteo.com/en/docs)
-</br>
+  
 - **providers.json** # I changed the names and the prices with some known providers and some prices I found online.
 
 
