@@ -1,5 +1,5 @@
 import spot from "../../../../data/spot.json";
-import { checkIfDateInsideRange } from "../../../../pages/utils";
+import { checkIfDateInsideRange } from "../../utils";
 
 export default function handler(req, res) {
     const { day } = req.query;

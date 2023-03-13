@@ -2,7 +2,7 @@ import consumption from "../../../../data/consumption.json";
 import {
     setCorrectDateVariables,
     checkIfRangeInsideRange,
-} from "../../../../pages/utils";
+} from "../../utils";
 
 export default function handler(req, res) {
     var { range } = req.query;

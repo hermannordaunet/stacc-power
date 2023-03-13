@@ -1,5 +1,5 @@
 import consumption from "../../../../data/consumption.json";
-import { checkIfRangeInsideRange } from "../../../../pages/utils";
+import { checkIfRangeInsideRange } from "../../utils";
 
 export default function handler(req, res) {
     const { today } = req.query;

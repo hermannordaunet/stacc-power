@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 
 export function getDateRange(data) {
     // Sort the data by the "from" date in ascending order
