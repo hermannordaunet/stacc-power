@@ -53,13 +53,13 @@ First I wanted to create some base points to get all the data I have collected, 
 
 Then I wanted to create endpoint were the frontend developer can get the consumption data sliced into more usable sizes:
 
-`/api/consumption/hour`
-`/api/consumption/day`
-`/api/consumption/week`
-`/api/consumption/month`
-`/api/consumption/year`
-`/api/consumption/range`
-`/api/consumption/total`
+`/api/consumption/hour`  
+`/api/consumption/day`  
+`/api/consumption/week`  
+`/api/consumption/month`  
+`/api/consumption/year`  
+`/api/consumption/range`  
+`/api/consumption/total`  
 
 All these endpoint (except range and total) should end with /YYYY-MM-DDTHH. For example
 
