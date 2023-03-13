@@ -20,7 +20,7 @@ export default function handler(req, res) {
     filteredData.reduce((acc, cur) => acc + cur.consumption, 0).toFixed(3)
   );
 
-  const response = { filteredData, totalHourConsumption, dateSubString };
+  const response = { totalHourConsumption, dateSubString, filteredData };
   // Return zero if date is invalid
   // Send back a response with the processed data
   res.status(200).json(response);

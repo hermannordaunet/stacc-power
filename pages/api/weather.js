@@ -1,4 +1,4 @@
-import weather from "../../data/oslo.json";
+import weather from "../../data/weather.json";
 
 export default function handler(req, res) {
 

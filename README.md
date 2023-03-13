@@ -2,7 +2,7 @@
 
 ## **Theme:** ⚡ Electricity ⚡
 
-As you guys perfectly described:
+### As you guys perfectly described:
 
 *"For the past year and a half, electricity prices have been soaring, and it affects us all. To help save on prices, people have quickly become much more conscious about their usage."*
  
@@ -28,14 +28,16 @@ You are free to base you solution from the web application packaged in this repo
 
 Otherwise are you free to start from scratch and take the assignment in any direction that you want. The only requirement is that it remains related to fintech. There are likely many other starting points to take inspiration from, one example being [Strømpris.no](https://www.strompris.no/)
 
+# Solution: 
+-- 
 
 ## Data
 
 In the data folder I kept the two json files that you already provided, but I added some files and changed one of the files:
-- spot.json # all the spotprices in norway in the same time range we had consumption data from. Downloaded from [Strømpris.no](https://www.strompris.no/spotpriser)
-- weather.json # weather data from the same time range as we had for the consumption data. Downloaded from [Open-Meteo](https://open-meteo.com/en/docs)
-
-- providers.json # I changed the names and the prices with some known providers and some prices I found online.
+- **spot.json** # all the spotprices in norway in the same time range we had consumption data from. Downloaded from [Strømpris.no](https://www.strompris.no/spotpriser)
+- **weather.json** # weather data from the same time range as we had for the consumption data. Downloaded from [Open-Meteo](https://open-meteo.com/en/docs)
+</br>
+- **providers.json** # I changed the names and the prices with some known providers and some prices I found online.
 
 
 ## Endpoints:
@@ -45,44 +47,139 @@ This is were I used most of my knowledge to create good endpoint so that the dat
 ### Data
 First I wanted to create some base points to get all the data I have collected, and I also kept the two that were already implemented:
 
-/api/weather
-/api/spot
+`/api/weather`
+`/api/spot`
 
 ### Consumption
 
 Then I wanted to create endpoint were the frontend developer can get the consumption data sliced into more usable sizes:
 
-/api/consumption/hour
-/api/consumption/day
-/api/consumption/week
-/api/consumption/month
-/api/consumption/year
-/api/consumption/range
-api/consumption/total
+`/api/consumption/hour`
+`/api/consumption/day`
+`/api/consumption/week`
+`/api/consumption/month`
+`/api/consumption/year`
+`/api/consumption/range`
+`/api/consumption/total`
 
-All these endpoint (except range) should end with /YYYY-MM-DDTHH. For example
+All these endpoint (except range and total) should end with /YYYY-MM-DDTHH. For example
 
-/api/consumption/hour/2023-01-02T15
+`/api/consumption/hour/2023-01-02T15`
 
 All these endpoints returns the filteredData, totalConsumption and the query used to get the data. 
 For the range endpoint the query needs to be:
 
-/api/consumption/range/YYYY-MM-DDTHH/YYYY-MM-DDTHH
+`/api/consumption/range/YYYY-MM-DDTHH/YYYY-MM-DDTHH`
+
+The `/api/consumption/total` is needs no query and only returns the sum of all the consumption on the provided data.
+
+### Stats
+In these endpoints I just wanted to get the idea of using the data we already have to either predict the power consumption for the given user, or use the given data to give the user som feedback on how and when the most power is consumed. I did not get to look to much into this, but I really wanted to be able to run some machine learning on this. Looking into machine learning and javascript I abonded the idea for now. But these to endpoint can give some cool data that might be interesting to some users. 
+
+`/api/stats/day`
+`/api/stats/hour`
+
+Both of these use the same time format as previous endspoints. 
+
+`/api/stats/hours` has some cool values calulated for every hour in a day given the data in **consumption.json**
+
+### Spot
+
+`/api/consumption/hour`
+`/api/consumption/day`
+`/api/consumption/week`
+`/api/consumption/month`
+`/api/consumption/year`
+`/api/consumption/range`
+
+All of these use the same time format as previous endspoints. 
+It returns the spot price for NO1-NO5. This can be useful because a lot of costumers does not even know what the spotprice is at a given time. 
+
+### Weather
+
+`/api/weather/`
+
+This endpoint can return the weather for a given time. In the data there are the temperature and the wind speed. There could be more data, but I just tried to get some data to begin with. 
+
+The endpoint takes **/YYYY-MM-DDTHH** as the query. 
+
+### Comparison
+
+Now for the one API that will be the most useful to give the costumer knowledge of the price they pay, and where they can save money. 
+
+`/api/comparison/hour`
+`/api/comparison/day`
+`/api/comparison/week`
+`/api/comparison/month`
+`/api/comparison/year`
+`/api/comparison/range`
+`/api/comparison/total`
 
 
+These endpoint work the same way as the consumption. 
+The API returns these types of data:
 
-`https://future-of-fintech-v2023.vercel.app/api/providers`, `https://future-of-fintech-v2023.vercel.app/api/consumption`
+
+```
+{
+    "startDate": "2023-01-01T00",
+    "endDate": "2023-01-02T00",
+    "spotPriceByNO": {
+        "NO1": 10895.093,
+        "NO2": 10895.093,
+        "NO3": 5556.485,
+        "NO4": 2552.178,
+        "NO5": 10898.026
+    },
+    "totalConsumption": 75.232,
+    "providerPrices": {
+        "Volte": {
+            "pricingModel": "fixed",
+            "monthlyFee": 3900,
+            "fixedPrice": 215.6,
+            "fixedPricePeriod": 12,
+            "companyPriceFixed": 16220.019
+        },
+        "Agva": {
+            "pricingModel": "fixed",
+            "monthlyFee": 4900,
+            "fixedPrice": 294.9,
+            "fixedPricePeriod": 3,
+            "companyPriceFixed": 22185.917
+        },
+        "Motkraft": {
+            "pricingModel": "spot-hourly",
+            "monthlyFee": 2900,
+            "prKwhFee": 2,
+            "companyPriceByNO": {
+                "NO1": 11045.557,
+                "NO2": 11045.557,
+                "NO3": 5706.949,
+                "NO4": 2702.642,
+                "NO5": 11048.49
+            }
+        },
+        "Fjordkraft": {
+            "pricingModel": "spot-hourly",
+            "monthlyFee": 4900,
+            "prKwhFee": 4.9,
+            "companyPriceByNO": {
+                "NO1": 11263.73,
+                "NO2": 11263.73,
+                "NO3": 5925.122,
+                "NO4": 2920.815,
+                "NO5": 11266.663
+            }
+        }
+    }
+}
+```
+
+In this json we have information on how much the money the customer have used in terms of just the spotprice, and how much they have used if they had the different providers. 
 
 --
 
 ## Get in touch!
-
-We also have a dedicated _[discord channel](https://discord.gg/s2RyPJvBqQ)_ where past and present participants can chat about anything and everything.
-The admins are also listening to this channel so feel free to reach out!
-
-[![Joing us on Discord](https://assets-global.website-files.com/6257adef93867e50d84d30e2/62594fddd654fc29fcc07359_cb48d2a8d4991281d7a6a95d2f58195e.svg)](https://discord.gg/s2RyPJvBqQ)
-
-[If everything fails then we also have an email -> challenge@stacc.com :) ](mailto:challenge@stacc.com)
 
 --
 

@@ -1,5 +1,4 @@
-import spotData from "../../data/localization.json";
-import { convertDate } from "../utils";
+import spotData from "../../data/spot.json";
 
 export default function handler(req, res) {
     res.status(200).json(spotData);
