@@ -1,5 +1,5 @@
 import consumption from "../../../../data/consumption.json";
-import { analyzeDataByHour } from "../../../utils"
+import { analyzeDataByHour } from "../../utils"
 
 export default function handler(req, res) {
   const { hour } = req.query;

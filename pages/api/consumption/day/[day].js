@@ -20,7 +20,7 @@ export default function handler(req, res) {
     );
 
     // Return zero if date is invalid
-    const response = { totalDayConsumption, dateSubString, filteredDataS };
+    const response = { totalDayConsumption, dateSubString, filteredData };
 
     // Send back a response with the processed data
     res.status(200).json(response);

@@ -7,7 +7,7 @@ import {
     checkIfRangeInsideRange,
     getSpotPriceByNO,
     getProviderPrices,
-} from "../../../utils";
+} from "../../utils";
 
 export default function handler(req, res) {
     var { range } = req.query;

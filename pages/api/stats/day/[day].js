@@ -1,5 +1,5 @@
 import consumption from "../../../../data/consumption.json";
-import { calculatConsumptionByWeekday, countDaysByWeekday } from "../../../utils"
+import { calculatConsumptionByWeekday, countDaysByWeekday } from "../../utils"
 
 export default function handler(req, res) {
   const { day } = req.query;

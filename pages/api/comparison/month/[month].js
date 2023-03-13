@@ -2,7 +2,7 @@ import spot from "../../../../data/spot.json";
 import providers from "../../../../data/providers.json";
 import consumption from "../../../../data/consumption.json";
 
-import { getSpotPriceByNO, getProviderPrices } from "../../../utils";
+import { getSpotPriceByNO, getProviderPrices } from "../../utils";
 
 export default function handler(req, res) {
     const { month } = req.query;
