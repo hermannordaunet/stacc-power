@@ -43,7 +43,7 @@ This is were I used most of my knowledge to create good endpoint so that the dat
 ### Data
 First I wanted to create some base points to get all the data I have collected, and I also kept the two that were already implemented:
 
-`/api/weather`
+`/api/weather`  
 `/api/spot`
 
 ### Consumption
