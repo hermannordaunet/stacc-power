@@ -28,7 +28,10 @@ You are free to base you solution from the web application packaged in this repo
 
 Otherwise are you free to start from scratch and take the assignment in any direction that you want. The only requirement is that it remains related to fintech. There are likely many other starting points to take inspiration from, one example being [Strømpris.no](https://www.strompris.no/)
 
-# Solution: 
+# Design
+I tried to create a website using Figma that can show how the API endpoints can be used to give the customer more and easier information on how the power bill can be lowered based on their consumption data. A local file copy can be found [here](/design/Stacc-power-stuff.fig)
+
+# API
 
 ## Data
 
