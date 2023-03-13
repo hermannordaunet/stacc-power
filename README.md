@@ -18,20 +18,14 @@ Other things that can help users when looking at the data we present is to show 
 
 In my approach I tried to create a backend by making a lot more endpoints in the API folder that were already in the project. I just git cloned the repo and ended up using this as a base. I have no experience in frontend, so I tried to make use of my knowledge in the backend. I also like to do some design to get an idea of how my backend could be used. So that is why I also tried to make a Figma design on how this data that my backend extracts can be presented to the user. 
 
-So in this task, we want you to create an application or service that can help consumers choose the power provider that is cheapest for them.
-There are many considerations and approaches to solving such a problem, you are therefore free to solve this task in any way you want. You are free to focus on frontend, backend, design or everything combined. Creativity is encouraged!
- - One important consideration is **explainability**. There may be multiple factors that determine if a provider is _good_ or _bad_, please make an effort to detail why we can classify it as one or the other. 
-
-## Starting point
-
-You are free to base you solution from the web application packaged in this repo. It is a Javascript and React application that contains a simple data fetcher and a library for displaying the data in graphs. If you use this repository as the base, please read the [How to run](https://github.com/stacc/future-of-fintech-V2023/blob/main/how-to-run.md) file on how to do so.
-
-Otherwise are you free to start from scratch and take the assignment in any direction that you want. The only requirement is that it remains related to fintech. There are likely many other starting points to take inspiration from, one example being [Strømpris.no](https://www.strompris.no/)
-
 # Design
 I tried to create a website using Figma that can show how the API endpoints can be used to give the customer more and easier information on how the power bill can be lowered based on their consumption data. A local file copy can be found [here](/design/), named **Stacc-power-stuff.fig**.
 
 # API
+
+## Starting point
+
+Since I used the same **how to run** and codebase as your provided this is the same for my code. I also got the code running using [Vercel](https://stacc-power.vercel.app/). Here you can add /api/ behind to get access to all the same API's as the local one. There are some weird error when passing the wrong query on the range endpoints. But it works if the format is correct. 
 
 ## Data
 
@@ -70,8 +64,10 @@ All these endpoint (except range and total) should end with /YYYY-MM-DDTHH. For 
 
 All these endpoints returns the filteredData, totalConsumption and the query used to get the data. 
 For the range endpoint the query needs to be:
-
+ 
 `/api/consumption/range/YYYY-MM-DDTHH/YYYY-MM-DDTHH`
+ 
+In the local API I got the error messages to work when passing the wrong format. But the vercel app did not work. 
 
 The `/api/consumption/total` is needs no query and only returns the sum of all the consumption on the provided data.
 
