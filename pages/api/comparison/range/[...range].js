@@ -12,7 +12,7 @@ import {
 export default function handler(req, res) {
     var { range } = req.query;
 
-    if (!range[0] || !range[1]) {
+    if (range.length < 2) {
         res.status(400).json({
             error: "query needs to be /YYYY-MM-DDTHH/YYYY-MM-DDTHH ",
         });
